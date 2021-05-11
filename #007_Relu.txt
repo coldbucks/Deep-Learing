@@ -1,0 +1,51 @@
+
+
+활성화 함수의 주요 목적
+
+딥러닝 네트웍에 비선형성을 적용하기 위함
+
+- 비선형 활성화 함수는 복잡한 함수를 근사 할 수 있도록
+만들어 줌.
+
+
+ 'Relu' 은닉층에 사용 됨
+
+ 'Softmax'  sigmoid와 유사하게 score 값을 확률값 0 ~1로
+변환하지만, 차이점은 소프트 맥스는 개별 출력값의 총 합이 1이 되도록 매핑해 주는 것임.
+
+ Multi Classfication의 최종 활성화 함수로 사용됨. 
+
+ 
+손실 = 비용 =  목적함수
+
+역할: 학습과정이 올바르게 이뤄질수 있도록 적절한 가이드를 제공할 수 있어야 함.
+
+Cross Entropy 특성
+
+실제 클래스 값에 해당하는 Softmax의 결과 값에만 Loss를
+부여함. 아주 잘못된 예측 결과에는매우 높은 Loss 부여
+
+
+Optimizer
+- 보다 최적으로 GD를 적용
+- 최소 Loss로 보다 빠르고 안정적으로 수렴 할수 있는
+기법 적용 필요
+
+ 주요 Optimizer
+
+Momentum
+
+AdaGrad
+
+RMSprop
+
+ADAM ( RMSprop + Momentum) 
+
+Learning Rate를 적용하는 부분은 RMS와 유사 
+Weight에 변경된  Gradient를 적용하는 부분은 Momentum과 유사하나. Momentum 적용시 과거
+Gradient의 영향을 감소시키도록 [지수 가중 평균]을 적용
+
+학습률 최적화 유형
+Learning Rate Scheduler 방식 
+요 놈아가 최적화 할때 많이 쓴데, 일단 keep
+
